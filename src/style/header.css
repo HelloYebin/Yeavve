@@ -3,7 +3,6 @@
   position: fixed;
   width: 100%;
 }
-
 .header-links {
   padding-left: 0;
   color: gray;
@@ -45,6 +44,7 @@
   align-items: center;
   position: absolute;
   right: 125px;
+  cursor: pointer;
 }
 .search {
   font-size: 20px;
