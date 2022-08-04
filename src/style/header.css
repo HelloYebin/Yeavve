@@ -1,0 +1,52 @@
+.header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.header-links {
+  padding-left: 0;
+  color: gray;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  font-size: 12px;
+  font-weight: bolder;
+  margin-right: 10em;
+}
+.header-links > li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.hr {
+  border: 1px solid gray;
+}
+.secondHeader {
+  max-width: 90%;
+  height: 4em;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+}
+#menu {
+  display: flex;
+  list-style: none;
+  color: gray;
+  font-size: 20px;
+  padding-left: 0;
+  margin-left: 5em;
+}
+#menu > li {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.searchBar {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 125px;
+}
+.search {
+  font-size: 20px;
+  color: gray;
+}
