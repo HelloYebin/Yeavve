@@ -1,5 +1,13 @@
+#movieContainer {
+  width: 1190px;
+  height: 550px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid red;
+}
 .moviesTop {
-  width: 1200px;
+  width: 1190px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -21,12 +29,14 @@
 .movies {
   display: flex;
   gap: 10px;
-  width: 1200px;
-  height: 500px;
+  width: 1190px;
   position: relative;
   overflow: hidden;
   left: 50%;
   transform: translateX(-50%);
+  padding-left: 10px;
+  border: 1px solid blue;
+  padding-left: 0;
 }
 .movie {
   color: white;
@@ -44,4 +54,27 @@
 }
 .movieImg:hover {
   transform: scale(1.05);
+}
+.leftArrow {
+  position: absolute;
+  background-color: white;
+  width: 40px;
+  height: 70px;
+  opacity: 0.2;
+  top: 37%;
+  z-index: 3;
+  transform: rotate(180deg);
+  left: -40px;
+  transition: all 0.2s linear;
+}
+.rightArrow {
+  position: absolute;
+  background-color: white;
+  width: 40px;
+  height: 70px;
+  opacity: 0.2;
+  top: 37%;
+  right: -40px;
+  z-index: 3;
+  transition: all 0.2s linear;
 }
