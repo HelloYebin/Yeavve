@@ -1,0 +1,47 @@
+.moviesTop {
+  width: 1200px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 20px;
+}
+.topic {
+  color: white;
+  font-size: 23px;
+}
+.more {
+  color: gray;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: end;
+}
+.movies {
+  display: flex;
+  gap: 10px;
+  width: 1200px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.movie {
+  color: white;
+  height: 380px;
+  width: 230px;
+  flex-direction: column;
+  color: gray;
+}
+.imgBox {
+  width: 230px;
+  overflow: hidden;
+}
+.movieImg {
+  transition: all 0.2s linear;
+}
+.movieImg:hover {
+  transform: scale(1.05);
+}
