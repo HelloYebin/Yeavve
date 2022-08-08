@@ -1,3 +1,47 @@
 .bannerBody {
   margin-top: 115px;
+
+  overflow: hidden;
+}
+.slideShow {
+  left: 50%;
+}
+.slides {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1190px;
+  padding-left: 0;
+  display: flex;
+  gap: 20px;
+}
+.slides > li {
+  list-style: none;
+  transform: translateX(-2420px);
+}
+.controls {
+  font-size: 100px;
+}
+.prev {
+  position: absolute;
+  left: 9%;
+  top: 320px;
+  color: gray;
+  opacity: 0.6;
+}
+.next {
+  position: absolute;
+  right: 9%;
+  top: 320px;
+  transform: rotate(180deg);
+  color: gray;
+  opacity: 0.6;
+}
+.prev:hover {
+  color: white;
+  opacity: 0.7;
+}
+.next:hover {
+  color: white;
+  opacity: 0.7;
 }

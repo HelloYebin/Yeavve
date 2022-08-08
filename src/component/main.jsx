@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import arrow from "../image/arrow.png";
 import styles from "../style/main.module.css";
 
-function Main({ topic, rating, genre, detail }) {
+function Main({ topic, detail }) {
   const [movies, setMovies] = useState([]);
   const [showArrow, setShowArrow] = useState(false);
   let [movieX, setMovieX] = useState(0);
@@ -36,7 +36,9 @@ function Main({ topic, rating, genre, detail }) {
     >
       <div className={styles.moviesTop}>
         <a className={styles.topic}>{topic}</a>
-        <a className={styles.more}>더보기 ＞</a>
+        <a className={styles.more} href="#">
+          더보기 ＞
+        </a>
       </div>
       <img
         src={arrow}
