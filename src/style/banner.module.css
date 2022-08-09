@@ -19,6 +19,11 @@
   list-style: none;
   transform: translateX(-2420px);
 }
+.slides > li > a > img {
+  width: 1180px;
+  height: 480px;
+  position: absolute;
+}
 .controls {
   font-size: 100px;
 }
