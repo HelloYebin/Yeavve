@@ -1,10 +1,11 @@
 #movieContainer {
   width: 1190px;
-  height: 550px;
+  height: 500px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
+  margin-top: 42px;
 }
 .moviesTop {
   width: 1190px;
@@ -65,7 +66,7 @@
   width: 40px;
   height: 70px;
   opacity: 0.2;
-  top: 42%;
+  top: 47%;
   z-index: 100;
   transform: rotate(180deg);
   left: -40px;
@@ -78,7 +79,7 @@
   width: 40px;
   height: 70px;
   opacity: 0.2;
-  top: 42%;
+  top: 47%;
   right: -40px;
   z-index: 100;
   transition: all 0.2s linear;
