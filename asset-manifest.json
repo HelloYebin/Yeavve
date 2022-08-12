@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Yeavve/static/css/main.ec2dc596.css",
+    "main.js": "/Yeavve/static/js/main.1b064007.js",
+    "index.html": "/Yeavve/index.html",
+    "main.ec2dc596.css.map": "/Yeavve/static/css/main.ec2dc596.css.map",
+    "main.1b064007.js.map": "/Yeavve/static/js/main.1b064007.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec2dc596.css",
+    "static/js/main.1b064007.js"
+  ]
+}
