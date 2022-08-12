@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Sans+KR:wght@300&display=swap");
+
 .header {
   top: 0;
   position: fixed;
@@ -18,9 +20,16 @@
 .header-links > li {
   padding-left: 10px;
   padding-right: 10px;
+  font-family: "Noto Sans KR";
 }
 .hr {
   border: 1px solid gray;
+}
+.headerLogo {
+  color: white;
+  font-size: 40px;
+  font-family: "Josefin Sans";
+  text-decoration: none;
 }
 .secondHeader {
   max-width: 90%;
@@ -36,6 +45,7 @@
   font-size: 20px;
   padding-left: 0;
   margin-left: 5em;
+  font-family: "Noto Sans KR";
 }
 #menu > li {
   padding-left: 18px;
@@ -51,4 +61,5 @@
 .search {
   font-size: 20px;
   color: gray;
+  font-family: "Noto Sans KR";
 }

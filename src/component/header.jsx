@@ -1,6 +1,7 @@
 import styles from "../style/header.css";
 import logo from "../image/logo.png";
 import search from "../image/icons8-search-50.png";
+
 function Header() {
   return (
     <div className="position">
@@ -11,7 +12,9 @@ function Header() {
         </ul>
         <hr className="hr" />
         <div className="secondHeader">
-          <img src={logo} className="logo" />
+          <a className="headerLogo" href="#">
+            yeavve
+          </a>
           <nav>
             <ul id="menu">
               <li>홈</li>
