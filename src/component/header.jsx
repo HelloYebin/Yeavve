@@ -1,5 +1,4 @@
 import styles from "../style/header.css";
-import logo from "../image/logo.png";
 import search from "../image/icons8-search-50.png";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -9,7 +8,13 @@ function Header() {
   const [categoryClick, setCategoryClick] = useState(false);
   const [liveClick, setLiveClick] = useState(false);
   const [myClick, setMyClick] = useState(false);
-
+  const [categoryMouse, setCategoryMouse] = useState(true);
+  function onCategory() {
+    setCategoryMouse(false);
+  }
+  function offCategory() {
+    setCategoryMouse(true);
+  }
   function menuHomeClick() {
     setHomeClick(true);
     setCategoryClick(false);
@@ -60,6 +65,8 @@ function Header() {
                 id="menu_category"
                 className={categoryClick ? "menuClicked" : null}
                 onClick={menuCategoryClick}
+                onMouseEnter={onCategory}
+                onMouseLeave={offCategory}
               >
                 카테고리
               </li>
@@ -82,6 +89,26 @@ function Header() {
           <div className="searchBar">
             <img src={search} width="25px" />
             <span className="search">검색하기</span>
+          </div>
+          <div
+            id="category_detail"
+            className={categoryMouse ? "hidden" : null}
+            onMouseEnter={onCategory}
+            onMouseLeave={offCategory}
+          >
+            <ul className="category_ul">
+              <li>전체 카테고리 보기</li>
+              <hr />
+              <li>추천 메뉴</li>
+              <li>드라마</li>
+              <li>예능</li>
+              <li>영화</li>
+              <li>영화플러스</li>
+              <li>해외시리즈</li>
+              <li>프로야구</li>
+              <li>ORIGINAL</li>
+              <li>CLASSIC</li>
+            </ul>
           </div>
         </div>
       </div>

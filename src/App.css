@@ -4,3 +4,14 @@ html {
   margin: 0;
   background-color: #1b1b1b;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  /*스크롤바 트랙 색상*/
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body::-webkit-scrollbar-thumb {
+  /*스크롤바의 색상*/
+  background-color: lightgray;
+}
