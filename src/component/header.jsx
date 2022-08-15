@@ -1,8 +1,40 @@
 import styles from "../style/header.css";
 import logo from "../image/logo.png";
 import search from "../image/icons8-search-50.png";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function Header() {
+  const [homeClick, setHomeClick] = useState(true);
+  const [categoryClick, setCategoryClick] = useState(false);
+  const [liveClick, setLiveClick] = useState(false);
+  const [myClick, setMyClick] = useState(false);
+
+  function menuHomeClick() {
+    setHomeClick(true);
+    setCategoryClick(false);
+    setLiveClick(false);
+    setMyClick(false);
+  }
+  function menuCategoryClick() {
+    setCategoryClick(true);
+    setHomeClick(false);
+    setLiveClick(false);
+    setMyClick(false);
+  }
+  function menuLiveClick() {
+    setLiveClick(true);
+    setCategoryClick(false);
+    setHomeClick(false);
+    setMyClick(false);
+  }
+  function menuMyClick() {
+    setMyClick(true);
+    setCategoryClick(false);
+    setHomeClick(false);
+    setLiveClick(false);
+  }
+
   return (
     <div className="position">
       <div className="header">
@@ -17,10 +49,34 @@ function Header() {
           </a>
           <nav>
             <ul id="menu">
-              <li>홈</li>
-              <li>카테고리</li>
-              <li>LIVE</li>
-              <li>MY</li>
+              <li
+                id="menu_home"
+                className={homeClick ? "menuClicked" : null}
+                onClick={menuHomeClick}
+              >
+                홈
+              </li>
+              <li
+                id="menu_category"
+                className={categoryClick ? "menuClicked" : null}
+                onClick={menuCategoryClick}
+              >
+                카테고리
+              </li>
+              <li
+                id="menu_live"
+                className={liveClick ? "menuClicked" : null}
+                onClick={menuLiveClick}
+              >
+                LIVE
+              </li>
+              <li
+                id="menu_my"
+                className={myClick ? "menuClicked" : null}
+                onClick={menuMyClick}
+              >
+                MY
+              </li>
             </ul>
           </nav>
           <div className="searchBar">

@@ -6,63 +6,54 @@ import {
   faPlay,
   faCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import BannerContent from "./bannerContent";
 
 function Banner() {
-  const slidesRef = useRef();
   let [transition, setTransition] = useState("transform 500ms ease-in-out");
   let [bannerX, setBannerX] = useState(0);
-  const [autoPlay, setAutoPlay] = useState(true);
-  const [currPage, setCurrPage] = useState(1);
-  // const IntervalPlay = setInterval(function () {
-  //   swipeRight();
-  // }, 2000);
-  //useEffect,setInterval 이용해서 자동재생 기능 추가하기
+  const [autoPlayBtn, setAutoPlayBtn] = useState(true);
+  let [currPage, setCurrPage] = useState(1);
+  const swipeWidth = 1210;
+
   function swipeLeft() {
-    setBannerX(bannerX + 1210);
-    setTransition("transform 500ms ease-in-out");
+    setBannerX(bannerX + swipeWidth);
+
     if (bannerX === 0) {
       setTimeout(function () {
         setTransition("");
         setBannerX(-6050);
       }, 500);
     }
-    setCurrPage(currPage - 1);
-    if (currPage === 1) {
+    setTransition("transform 500ms ease-in-out");
+    setCurrPage(--currPage);
+    if (currPage === 0) {
       setCurrPage(6);
     }
   }
+
   function swipeRight() {
-    setBannerX(bannerX - 1210);
-    setTransition("transform 500ms ease-in-out");
+    setBannerX(bannerX - swipeWidth);
     if (bannerX == -7260) {
       setTimeout(function () {
         setTransition("");
-        setBannerX(-1210);
+        setBannerX(-swipeWidth);
       }, 500);
     }
-    setCurrPage(currPage + 1);
-    if (currPage === 6) {
+    setTransition("transform 500ms ease-in-out");
+    setCurrPage(++currPage);
+    if (currPage === 7) {
       setCurrPage(1);
     }
   }
-  function playFunc() {
-    if (autoPlay) {
-      setAutoPlay(false);
-    } else {
-      setAutoPlay(true);
-      console.log("palying");
-    }
-  }
-  console.log(bannerX);
+
   return (
     <div className={styles.bannerBody}>
       <div className={styles.main_nav}>
         <FontAwesomeIcon
-          icon={autoPlay ? faPause : faPlay}
+          icon={autoPlayBtn ? faPause : faPlay}
           className={styles.playingBtn}
-          onClick={playFunc}
+          onClick={() => setAutoPlayBtn(!autoPlayBtn)}
         />
         <div>
           <span className={styles.swiper_Pagination_bullets}>
@@ -106,7 +97,7 @@ function Banner() {
           transition: `${transition}`,
         }}
       >
-        <ul className={styles.slides} ref={slidesRef}>
+        <ul className={styles.slides}>
           <BannerContent
             bannerTitle={"imgbuild_20220708_151204806.png"}
             bannerNum={"20220707_banner_101040.jpg"}
