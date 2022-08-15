@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./component/header";
 import Main from "./component/main";
 import Banner from "./component/banner";
+import Footer from "./component/footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         topic={"영화속으로~ 음악속으로~"}
         detail={"minimum_rating=8&genre=music"}
       />
+      <Footer />
     </div>
   );
 }
