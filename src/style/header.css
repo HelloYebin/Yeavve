@@ -26,6 +26,13 @@
   padding-right: 10px;
   font-family: "Noto Sans KR";
 }
+.header-links > li:nth-child(-n + 4) {
+  border-right: 1px solid gray;
+  line-height: 15px;
+  margin-right: 3px;
+  padding-right: 10px;
+  display: inline-block;
+}
 .header-links > li:hover {
   cursor: pointer;
 }

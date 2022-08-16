@@ -44,8 +44,11 @@ function Header() {
     <div className="position">
       <div className="header">
         <ul className="header-links">
-          <li>로그인</li>|<li>이용권</li>|<li>쿠폰·코인 ∨</li>|<li>웨이브온</li>
-          |<li>이벤트</li>
+          <li>로그인</li>
+          <li>이용권</li>
+          <li>쿠폰·코인 ∨</li>
+          <li>웨이브온</li>
+          <li>이벤트</li>
         </ul>
         <hr className="hr" />
         <div className="secondHeader">
