@@ -1,0 +1,25 @@
+@media (max-width: 1200px) {
+  li > img {
+    transform: scale(0.8);
+  }
+  li > a > img {
+    transform: scale(0.8);
+    z-index: 2;
+  }
+}
+@media (max-width: 970px) {
+  li > img {
+    transform: scale(0.6);
+  }
+  li > a > img {
+    transform: scale(0.6);
+  }
+  @media (max-width: 730px) {
+    li > img {
+      transform: scale(0.4);
+    }
+    li > a > img {
+      transform: scale(0.4);
+    }
+  }
+}

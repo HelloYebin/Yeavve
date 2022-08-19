@@ -3,10 +3,24 @@ import Header from "./component/header";
 import Main from "./component/main";
 import Banner from "./component/banner";
 import Footer from "./component/footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [scrollY, setScrollY] = useState(0);
+  const pageUpClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setScrollY(0);
+  };
+
   return (
     <div>
+      <FontAwesomeIcon
+        icon={faCaretUp}
+        className="pageUp"
+        onClick={pageUpClick}
+      />
       <Header />
       <Banner />
       <Main topic={"인기영화"} detail={"minimum_rating=8"} />

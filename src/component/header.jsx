@@ -9,6 +9,7 @@ function Header() {
   const [liveClick, setLiveClick] = useState(false);
   const [myClick, setMyClick] = useState(false);
   const [categoryMouse, setCategoryMouse] = useState(true);
+  const [scrollY, setScrollY] = useState(0);
   function onCategory() {
     setCategoryMouse(false);
   }

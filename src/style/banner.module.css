@@ -25,6 +25,7 @@
 }
 .controls {
   font-size: 100px;
+  border: 1px solid white;
 }
 .prev {
   position: absolute;
@@ -65,4 +66,53 @@
 .swiper_Pagination_bullet {
   padding: 0 5px;
   font-size: 12px;
+}
+
+/* Reactive */
+
+@media (max-width: 1200px) {
+  .bannerBody {
+    width: 950px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    height: 455px;
+    top: -50px;
+  }
+  .prev {
+    top: 210px;
+  }
+  .next {
+    top: 210px;
+  }
+}
+
+@media (max-width: 970px) {
+  .bannerBody {
+    width: 710px;
+    margin-top: 60px;
+  }
+  .controls {
+    font-size: 70px;
+  }
+}
+@media (max-width: 730px) {
+  .bannerBody {
+    width: 470px;
+    margin-top: 0px;
+  }
+  .controls {
+    font-size: 40px;
+  }
+  .prev {
+    top: 240px;
+  }
+  .next {
+    top: 240px;
+  }
+}
+@media (max-width: 510px) {
+  .bannerBody {
+    display: none;
+  }
 }

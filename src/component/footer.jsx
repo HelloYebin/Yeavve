@@ -4,7 +4,7 @@ import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   return (
-    <div>
+    <div className={styles.footer}>
       <hr />
       <div className={styles.notice}>
         <span>공지사항</span>

@@ -125,3 +125,31 @@
 .hidden {
   display: none;
 }
+
+/* Reactive */
+@media (max-width: 730px) {
+  #menu {
+    display: none;
+  }
+}
+@media (max-width: 510px) {
+  .searchBar {
+    display: none;
+  }
+  .headerLogo {
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+  }
+  .header-links {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header-links > li {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .header-links > li:hover {
+    color: white;
+  }
+}

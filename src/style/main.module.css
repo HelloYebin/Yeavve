@@ -8,7 +8,7 @@
   margin-top: 42px;
 }
 .moviesTop {
-  width: 1190px;
+  display: block;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -84,4 +84,37 @@
   z-index: 100;
   transition: all 0.2s linear;
   cursor: pointer;
+}
+
+/* reactive */
+
+@media (max-width: 1200px) {
+  #movieContainer {
+    width: 950px;
+    margin-top: 0px;
+  }
+  .movies {
+    left: 0;
+    transform: translateX(0);
+    transition: none;
+  }
+}
+
+@media (max-width: 970px) {
+  #movieContainer {
+    width: 710px;
+    top: -50px;
+  }
+}
+@media (max-width: 730px) {
+  #movieContainer {
+    width: 470px;
+    top: -100px;
+  }
+}
+@media (max-width: 510px) {
+  #movieContainer {
+    width: 230px;
+    top: 250px;
+  }
 }

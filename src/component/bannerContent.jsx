@@ -1,3 +1,5 @@
+import styles from "../style/bannerContent.module.css";
+
 function BannerContent({ bannerNum, bannerTitle, name }) {
   return (
     <li>
@@ -5,7 +7,6 @@ function BannerContent({ bannerNum, bannerTitle, name }) {
         <img
           src={`https://img.wavve.com/banner/pooq/2022/${bannerTitle}`}
           alt={`${name}`}
-          width="1190px"
         />
       </a>
       <img
