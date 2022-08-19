@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Yeavve/static/css/main.f1c74d38.css",
-    "main.js": "/Yeavve/static/js/main.cabd1e4f.js",
+    "main.css": "/Yeavve/static/css/main.17d97815.css",
+    "main.js": "/Yeavve/static/js/main.28c8f0a5.js",
     "index.html": "/Yeavve/index.html",
-    "main.f1c74d38.css.map": "/Yeavve/static/css/main.f1c74d38.css.map",
-    "main.cabd1e4f.js.map": "/Yeavve/static/js/main.cabd1e4f.js.map"
+    "main.17d97815.css.map": "/Yeavve/static/css/main.17d97815.css.map",
+    "main.28c8f0a5.js.map": "/Yeavve/static/js/main.28c8f0a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1c74d38.css",
-    "static/js/main.cabd1e4f.js"
+    "static/css/main.17d97815.css",
+    "static/js/main.28c8f0a5.js"
   ]
 }
