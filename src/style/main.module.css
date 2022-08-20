@@ -117,4 +117,13 @@
     width: 230px;
     top: 250px;
   }
+  .moviesTop {
+    flex-direction: column;
+  }
+  .leftArrow {
+    top: 55%;
+  }
+  .rightArrow {
+    top: 55%;
+  }
 }

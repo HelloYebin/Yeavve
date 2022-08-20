@@ -25,7 +25,6 @@
 }
 .controls {
   font-size: 100px;
-  border: 1px solid white;
 }
 .prev {
   position: absolute;
@@ -78,12 +77,16 @@
     position: relative;
     height: 455px;
     top: -50px;
+    padding-bottom: 60px;
   }
   .prev {
     top: 210px;
   }
   .next {
     top: 210px;
+  }
+  .main_nav {
+    top: 480px;
   }
 }
 
@@ -94,6 +97,9 @@
   }
   .controls {
     font-size: 70px;
+  }
+  .main_nav {
+    top: 430px;
   }
 }
 @media (max-width: 730px) {
@@ -110,9 +116,15 @@
   .next {
     top: 240px;
   }
+  .main_nav {
+    top: 380px;
+  }
 }
 @media (max-width: 510px) {
   .bannerBody {
+    display: none;
+  }
+  .main_nav {
     display: none;
   }
 }
