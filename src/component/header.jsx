@@ -1,7 +1,7 @@
-import styles from "../style/header.css";
+import styles from "../style/header.module.css";
 import search from "../image/icons8-search-50.png";
 import { useState } from "react";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [homeClick, setHomeClick] = useState(true);
@@ -17,6 +17,7 @@ function Header() {
     setCategoryMouse(true);
   }
   function menuHomeClick() {
+    console.log("dz?");
     setHomeClick(true);
     setCategoryClick(false);
     setLiveClick(false);
@@ -42,32 +43,36 @@ function Header() {
   }
 
   return (
-    <div className="position">
-      <div className="header">
-        <ul className="header-links">
-          <li>로그인</li>
+    <div className={styles.position}>
+      <div className={styles.header}>
+        <ul className={styles.headerLinks}>
+          <li>
+            <Link to="/login" className="">
+              로그인
+            </Link>
+          </li>
           <li>이용권</li>
           <li>쿠폰·코인 ∨</li>
           <li>웨이브온</li>
           <li>이벤트</li>
         </ul>
-        <hr className="hr" />
-        <div className="secondHeader">
-          <a className="headerLogo" href="#">
+        <hr className={styles.hr} />
+        <div className={styles.secondHeader}>
+          <Link to="/home" className={styles.headerLogo}>
             yeavve
-          </a>
+          </Link>
           <nav>
-            <ul id="menu">
+            <ul id={styles.menu}>
               <li
-                id="menu_home"
-                className={homeClick ? "menuClicked" : null}
+                id={styles.menu_home}
+                className={homeClick ? styles.menuClicked : null}
                 onClick={menuHomeClick}
               >
                 홈
               </li>
               <li
-                id="menu_category"
-                className={categoryClick ? "menuClicked" : null}
+                id={styles.menu_category}
+                className={categoryClick ? styles.menuClicked : null}
                 onClick={menuCategoryClick}
                 onMouseEnter={onCategory}
                 onMouseLeave={offCategory}
@@ -75,32 +80,32 @@ function Header() {
                 카테고리
               </li>
               <li
-                id="menu_live"
-                className={liveClick ? "menuClicked" : null}
+                id={styles.menu_live}
+                className={liveClick ? styles.menuClicked : null}
                 onClick={menuLiveClick}
               >
                 LIVE
               </li>
               <li
-                id="menu_my"
-                className={myClick ? "menuClicked" : null}
+                id={styles.menu_my}
+                className={myClick ? styles.menuClicked : null}
                 onClick={menuMyClick}
               >
                 MY
               </li>
             </ul>
           </nav>
-          <div className="searchBar">
+          <div className={styles.searchBar}>
             <img src={search} width="25px" />
-            <span className="search">검색하기</span>
+            <span className={styles.search}>검색하기</span>
           </div>
           <div
-            id="category_detail"
-            className={categoryMouse ? "hidden" : null}
+            id={styles.category_detail}
+            className={categoryMouse ? styles.hidden : null}
             onMouseEnter={onCategory}
             onMouseLeave={offCategory}
           >
-            <ul className="category_ul">
+            <ul className={styles.category_ul}>
               <li>전체 카테고리 보기</li>
               <hr />
               <li>추천 메뉴</li>
