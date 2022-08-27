@@ -11,8 +11,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/join" element={<Join />} />
+        <Route path="/Yeavve/login" element={<Login />} />
+        <Route path="/Yeavve/join" element={<Join />} />
       </Routes>
     </BrowserRouter>
   );

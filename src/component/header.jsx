@@ -46,7 +46,7 @@ function Header() {
       <div className={styles.header}>
         <ul className={styles.headerLinks}>
           <li>
-            <Link to="/login" className={styles.loginBtn}>
+            <Link to="/Yeavve/login" className={styles.loginBtn}>
               로그인
             </Link>
           </li>
@@ -57,7 +57,7 @@ function Header() {
         </ul>
         <hr className={styles.hr} />
         <div className={styles.secondHeader}>
-          <Link to="/home" className={styles.headerLogo}>
+          <Link to="/Yeavve/home" className={styles.headerLogo}>
             yeavve
           </Link>
           <nav>
