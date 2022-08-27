@@ -89,6 +89,13 @@
 .menuClicked {
   color: white;
 }
+.loginBtn {
+  color: gray;
+  text-decoration: none;
+}
+.loginBtn:hover {
+  color: white;
+}
 #category_detail {
   width: 200px;
   height: 390px;
@@ -125,7 +132,9 @@
 .hidden {
   display: none;
 }
-
+.headerLinks > li:hover {
+  color: white;
+}
 /* Reactive */
 @media (max-width: 730px) {
   #menu {
@@ -141,15 +150,13 @@
     position: relative;
     transform: translateX(-50%);
   }
-  .header-links {
+  .headerLinks {
     flex-direction: column;
     text-align: center;
+    margin-left: 0;
   }
-  .header-links > li {
+  .headerLinks > li {
     padding-top: 6px;
     padding-bottom: 6px;
-  }
-  .header-links > li:hover {
-    color: white;
   }
 }

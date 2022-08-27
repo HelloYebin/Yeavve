@@ -1,13 +1,11 @@
-import "../homepage.css";
 import Header from "../component/header";
 import Main from "../component/main";
 import Banner from "../component/banner";
 import Footer from "../component/footer";
-
+import styles from "../style/home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -20,7 +18,7 @@ function Home() {
     <div>
       <FontAwesomeIcon
         icon={faCaretUp}
-        className="pageUp"
+        className={styles.pageUp}
         onClick={pageUpClick}
       />
       <Header />

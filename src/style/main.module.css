@@ -115,7 +115,8 @@
 @media (max-width: 510px) {
   #movieContainer {
     width: 230px;
-    top: 250px;
+    height: 520px;
+    top: 120px;
   }
   .moviesTop {
     flex-direction: column;

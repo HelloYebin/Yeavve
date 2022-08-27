@@ -17,7 +17,6 @@ function Header() {
     setCategoryMouse(true);
   }
   function menuHomeClick() {
-    console.log("dz?");
     setHomeClick(true);
     setCategoryClick(false);
     setLiveClick(false);
@@ -47,7 +46,7 @@ function Header() {
       <div className={styles.header}>
         <ul className={styles.headerLinks}>
           <li>
-            <Link to="/login" className="">
+            <Link to="/login" className={styles.loginBtn}>
               로그인
             </Link>
           </li>
