@@ -57,7 +57,7 @@ function Header() {
         </ul>
         <hr className={styles.hr} />
         <div className={styles.secondHeader}>
-          <Link to="/Yeavve/home" className={styles.headerLogo}>
+          <Link to="/Yeavve" className={styles.headerLogo}>
             yeavve
           </Link>
           <nav>
