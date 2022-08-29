@@ -63,3 +63,10 @@ input {
 .joinBtn:hover {
   color: white;
 }
+
+@media (max-width: 510px) {
+  .login {
+    margin-top: 155px;
+    margin-bottom: -250px;
+  }
+}

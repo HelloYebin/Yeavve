@@ -3,18 +3,33 @@ import "./App.css";
 import Login from "./route/login";
 import Home from "./route/Home";
 import Join from "./route/Join";
+import Header from "./component/header";
+import Footer from "./component/footer";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [log, setLog] = useState(false);
+  const changeLog = (value) => {
+    setLog(value);
+  };
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
-        <Route path="/Yeavve/login" element={<Login />} />
-        <Route path="/Yeavve/join" element={<Join />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Header logState={log} changeLog={changeLog} />
+        <Routes>
+          <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+          <Route
+            path="/Yeavve/login"
+            element={<Login changeLog={changeLog} />}
+          />
+          <Route path="/Yeavve/join" element={<Join />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 

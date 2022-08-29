@@ -1,15 +1,16 @@
 import styles from "../style/header.module.css";
 import search from "../image/icons8-search-50.png";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function Header() {
+function Header({ logState, changeLog }) {
+  const navigate = useNavigate();
   const [homeClick, setHomeClick] = useState(true);
   const [categoryClick, setCategoryClick] = useState(false);
   const [liveClick, setLiveClick] = useState(false);
   const [myClick, setMyClick] = useState(false);
   const [categoryMouse, setCategoryMouse] = useState(true);
-  const [scrollY, setScrollY] = useState(0);
   function onCategory() {
     setCategoryMouse(false);
   }
@@ -40,15 +41,20 @@ function Header() {
     setHomeClick(false);
     setLiveClick(false);
   }
-
+  function clickLogin() {
+    if (logState === true) {
+      alert("로그아웃 되었습니다.");
+      changeLog(false);
+    } else {
+      navigate("/Yeavve/login");
+    }
+  }
   return (
     <div className={styles.position}>
       <div className={styles.header}>
         <ul className={styles.headerLinks}>
-          <li>
-            <Link to="/Yeavve/login" className={styles.loginBtn}>
-              로그인
-            </Link>
+          <li className={styles.loginBtn} onClick={clickLogin}>
+            {logState ? "로그아웃" : "로그인"}
           </li>
           <li>이용권</li>
           <li>쿠폰·코인 ∨</li>

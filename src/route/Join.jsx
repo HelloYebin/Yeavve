@@ -1,23 +1,13 @@
-import Header from "../component/header";
-import Footer from "../component/footer";
 import styles from "../style/join.module.css";
 function Join() {
-  let usersInfo = [];
-  function saveUser() {
-    localStorage.setItem("users", JSON.stringify(usersInfo));
-  }
   function addUserInfo(event) {
     event.preventDefault();
     const idValue = event.target.id.value;
     const passValue = event.target.password.value;
     const passCheck = event.target.passwordCheck.value;
     if (passValue === passCheck) {
-      const newUser = {
-        id: idValue,
-        password: passValue,
-      };
-      usersInfo.push(newUser);
-      saveUser();
+      localStorage.setItem("id", idValue);
+      localStorage.setItem("password", passValue);
       alert(`회원가입에 성공하였습니다. ${idValue}님 반갑습니다.`);
       window.location.href = "/Yeavve/login";
     } else {
@@ -26,7 +16,6 @@ function Join() {
   }
   return (
     <div>
-      <Header />
       <div className={styles.join}>
         <div className={styles.joinPage}>
           <h1 className={styles.joinH1}>회원가입</h1>
@@ -58,7 +47,6 @@ function Join() {
           </form>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

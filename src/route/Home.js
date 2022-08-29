@@ -1,7 +1,5 @@
-import Header from "../component/header";
 import Main from "../component/main";
 import Banner from "../component/banner";
-import Footer from "../component/footer";
 import styles from "../style/home.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
@@ -21,7 +19,6 @@ function Home() {
         className={styles.pageUp}
         onClick={pageUpClick}
       />
-      <Header />
       <Banner />
       <Main topic={"인기영화"} detail={"minimum_rating=8"} />
       <Main topic={"평점 9점이상의 명작영화"} detail={"minimum_rating=9"} />
@@ -38,7 +35,6 @@ function Home() {
         topic={"영화속으로~ 음악속으로~"}
         detail={"minimum_rating=8&genre=music"}
       />
-      <Footer />
     </div>
   );
 }

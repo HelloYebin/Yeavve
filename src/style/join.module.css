@@ -38,3 +38,9 @@ input {
   cursor: pointer;
   background-color: darkblue;
 }
+@media (max-width: 510px) {
+  .join {
+    margin-top: 155px;
+    margin-bottom: -300px;
+  }
+}
