@@ -1,5 +1,7 @@
 import styles from "../style/join.module.css";
+import { useNavigate } from "react-router-dom";
 function Join() {
+  const navigate = useNavigate();
   function addUserInfo(event) {
     event.preventDefault();
     const idValue = event.target.id.value;
@@ -9,7 +11,7 @@ function Join() {
       localStorage.setItem("id", idValue);
       localStorage.setItem("password", passValue);
       alert(`회원가입에 성공하였습니다. ${idValue}님 반갑습니다.`);
-      window.location.href = "/Yeavve/login";
+      navigate("/Yeavve/login");
     } else {
       alert("패스워드를 다시 확인하여주세요.");
     }
