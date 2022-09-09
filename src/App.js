@@ -7,14 +7,20 @@ import Header from "./component/header";
 import Footer from "./component/footer";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Detail from "./component/detail";
 
-function App() {
+function App({ detail }) {
+  const [movies, setMovies] = useState([]);
   const [log, setLog] = useState(false);
   const changeLog = (value) => {
     setLog(value);
   };
-
+  useEffect(() => {
+    fetch(`https://yts.mx/api/v2/list_movies.json?${detail}&sort_by=year`)
+      .then((response) => response.json())
+      .then((json) => setMovies(json.data.movies));
+  }, []);
   return (
     <div>
       <BrowserRouter>
@@ -26,6 +32,7 @@ function App() {
             element={<Login changeLog={changeLog} />}
           />
           <Route path="/Yeavve/join" element={<Join />} />
+          <Route path="/Yeavve/detail/:id" element={<Detail />} />
         </Routes>
         <Footer />
       </BrowserRouter>

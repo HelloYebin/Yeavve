@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import arrow from "../image/arrow.png";
 import styles from "../style/main.module.css";
 
@@ -56,16 +57,22 @@ function Main({ topic, detail }) {
         className={styles.movies}
         style={{ paddingRight: `${movieX}px` }}
       >
+        {/* 영화 정보 */}
         {movies.map((movie) => (
           <div key={movie.id} className={styles.movie}>
-            <div className={styles.imgBox}>
-              <img src={movie.medium_cover_image} className={styles.movieImg} />
-            </div>
-            <a>
-              {movie.title.length > 26
-                ? `${movie.title.slice(0, 26)}...`
-                : movie.title}
-            </a>
+            <Link to={`/Yeavve/Detail/${movie.id}`}>
+              <div className={styles.imgBox}>
+                <img
+                  src={movie.medium_cover_image}
+                  className={styles.movieImg}
+                />
+              </div>
+              <a>
+                {movie.title.length > 26
+                  ? `${movie.title.slice(0, 26)}...`
+                  : movie.title}
+              </a>
+            </Link>
           </div>
         ))}
       </section>
