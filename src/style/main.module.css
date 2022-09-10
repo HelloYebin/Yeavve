@@ -46,9 +46,12 @@
   height: 380px;
   width: 230px;
   flex-direction: column;
-  color: gray;
   cursor: pointer;
   z-index: 99;
+}
+.movieTitle {
+  color: gray;
+  text-decoration: none;
 }
 .imgBox {
   width: 230px;

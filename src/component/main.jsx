@@ -28,7 +28,6 @@ function Main({ topic, detail }) {
       .then((response) => response.json())
       .then((json) => setMovies(json.data.movies));
   }, []);
-
   return (
     <div
       id={styles.movieContainer}
@@ -60,7 +59,10 @@ function Main({ topic, detail }) {
         {/* 영화 정보 */}
         {movies.map((movie) => (
           <div key={movie.id} className={styles.movie}>
-            <Link to={`/Yeavve/Detail/${movie.id}`}>
+            <Link
+              to={`/Yeavve/Detail/${movie.id}`}
+              className={styles.movieTitle}
+            >
               <div className={styles.imgBox}>
                 <img
                   src={movie.medium_cover_image}
