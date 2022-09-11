@@ -73,7 +73,9 @@ function Header({ logState, changeLog }) {
                 className={homeClick ? styles.menuClicked : null}
                 onClick={menuHomeClick}
               >
-                홈
+                <Link to="/Yeavve" className={styles.menu_home}>
+                  홈
+                </Link>
               </li>
               <li
                 id={styles.menu_category}

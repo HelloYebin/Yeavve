@@ -74,6 +74,10 @@
   color: white;
   cursor: pointer;
 }
+.menu_home {
+  color: gray;
+  text-decoration: none;
+}
 .searchBar {
   display: flex;
   align-items: center;

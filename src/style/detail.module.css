@@ -18,3 +18,34 @@
   border: 1px solid #a5a5a5;
   margin-top: 10px;
 }
+
+.thumb {
+  transform: translateX(-50%);
+  left: 50%;
+  position: relative;
+}
+.detailContainer {
+  width: 1190px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.story {
+  color: #a5a5a5;
+}
+.commentTitle {
+  color: white;
+  margin-top: 50px;
+}
+.commentList {
+  color: #a5a5a5;
+  list-style: none;
+  padding-left: 0;
+}
+.commentEnter {
+  width: 70px;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
