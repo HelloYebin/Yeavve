@@ -25,7 +25,7 @@
   position: relative;
 }
 .detailContainer {
-  width: 1190px;
+  max-width: 1190px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
