@@ -2,21 +2,13 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styles from "../style/detail.module.css";
+import DetailComment from "./detailComment";
 function Detail() {
   const { id } = useParams();
   const [detail, setDetail] = useState([]);
-  const [showComment, setShowComment] = useState(
-    localStorage.getItem(`comments${id}`)
-  );
   const [buttonColor, setButtonColor] = useState(false);
   const comments = [];
 
-  function paintComment(newComment) {
-    const li = document.createElement("li");
-    const span = document.createElement("span");
-    li.appendChild(span);
-    span.innerText = newComment;
-  }
   const getMovie = async () => {
     const json = await (
       await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
@@ -24,18 +16,9 @@ function Detail() {
     setDetail(json.data.movie);
   };
 
-  function saveComments() {
-    localStorage.setItem(`comments${id}`, JSON.stringify(comments));
-  }
-
   useEffect(() => {
     getMovie();
   }, []);
-
-  const savedComment = localStorage.getItem(`comments${id}`);
-  if (savedComment !== null) {
-    const parsedComment = JSON.parse(savedComment);
-  }
 
   return (
     <div className={styles.detailBody}>
@@ -53,7 +36,8 @@ function Detail() {
         </div>
         <span className={styles.story}>{detail.description_full}</span>
         <h1 className={styles.commentTitle}>댓글</h1>
-        <ul className={styles.commentList}></ul>
+        <DetailComment />
+
         <form
           onSubmit={(event) => {
             event.preventDefault();
@@ -62,8 +46,7 @@ function Detail() {
             } else {
               const newComment = event.target.comment.value;
               comments.push(newComment);
-              paintComment(newComment);
-              saveComments();
+              localStorage.setItem(`comments${id}`, JSON.stringify(comments));
             }
           }}
         >
